@@ -54,11 +54,11 @@ class Song
       song
   end
   
-    def self.create_from_filename(song, name)
-      song_array = song.split(" - ")
+    def self.create_from_filename(filename)
+      result = filename.split(" - ")
       song = self.create 
-      song.name = song_array[1]
-      song.artist_name = song_array[0]
+      song.name = result[1]
+      song.artist_name = result[0]
       self.all << song 
       song
   end
