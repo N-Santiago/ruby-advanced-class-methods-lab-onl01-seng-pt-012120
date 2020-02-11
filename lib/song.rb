@@ -47,10 +47,10 @@ class Song
     
     def self.new_from_filename(filename)
       song_array = filename.split(" - ")
-      song_array[1] = song_array[1].chomp(".mp3") #chomp is used to remove the
-    song = self.new
-    song.name = song_array[1]
-    song.artist_name = song_array[0]
-    song
+      song_array[1] = song_array[1].chomp(".mp3") #chomp is used to remove the character at the end of strings (in this case, .mp3)
+      song = self.new
+      song.name = song_array[1]
+      song.artist_name = song_array[0]
+      song
   end
 end
