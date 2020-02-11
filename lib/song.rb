@@ -59,7 +59,6 @@ class Song
       song = self.create 
       song.name = result.name 
       song.artist_name = result.artist_name
-      self.all << song 
-      song
+      song 
   end
 end
