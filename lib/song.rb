@@ -59,6 +59,7 @@ class Song
       song = self.create 
       song.name = song_array[1]
       song.artist_name = song_array[0]
+      @all << song 
       song
   end
 end
