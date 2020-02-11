@@ -57,8 +57,8 @@ class Song
     def self.create_from_filename(filename)
       result = filename.split(" - ")
       song = self.create 
-      song.name = result[1]
-      song.artist_name = result[0]
+      song.name = result.name 
+      song.artist_name = result.artist_name
       self.all << song 
       song
   end
